@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  width: 100%;
+  font-family: 'Inter', 'Times New Roman', Times, serif;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  list-style: none;
+  margin-left: 0.75rem;
+  margin-right: 65%;
+  width: 15%;
+  font-size: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.items a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navigation svg {
+  display: block;
+}

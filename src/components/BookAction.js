@@ -1,34 +1,61 @@
 import { useState } from 'react';
+import Button from './Button';
 
 const BookActions = () => {
-  const [bookArr, setBookArr] = useState(['Book 1', 'Book 2']);
-  //   const books = ['Book 1', 'Book 2'];
+  const [bookArr, setBookArr] = useState([]);
+  const [bookObj, setBookObj] = useState({
+    title: '',
+    category: '',
+    author: '',
+  });
 
   const addBook = () => {
-    setBookArr(
-      (prevState) => [...prevState, `Book ${bookArr.length + 1}`],
-    );
+    if (!bookObj.title || !bookObj.category || !bookObj.author) {
+      return;
+    }
+
+    setBookArr((prevState) => [...prevState, bookObj]);
+
+    setBookObj({
+      title: '',
+      category: '',
+      author: '',
+    });
   };
 
-  const removeBook = (index) => {
-    // const removed = bookArr.filter((_, i) => i !== index);
-    setBookArr((prevBooks) => prevBooks.filter((_, i) => i !== index).map((_item, i) => `Book ${i + 1}`));
+  const handlechange = (event) => {
+    const { name, value } = event.target;
+    setBookObj((prevBookObj) => ({
+      ...prevBookObj,
+      [name]: value,
+    }));
   };
 
-  const newArray = bookArr.map((item, index) => (
+  const newArray = bookArr.map((item) => (
     <div key={item} className="display-book">
       <p>
         {' '}
-        {item}
+        {item.title}
       </p>
-
-      <button type="button" onClick={() => removeBook(index)}>Remove</button>
+      <p>
+        {' '}
+        {item.category}
+      </p>
+      <p>
+        {' '}
+        {item.author}
+      </p>
     </div>
   ));
 
   return (
     <div className="book-container">
-      <button type="button" onClick={addBook}>New Book</button>
+      <form>
+        <input type="text" placeholder="Book Title" className="book-input" name="title" value={bookObj.title} onChange={handlechange} required />
+        <input type="text" placeholder="Category" className="book-input" name="category" value={bookObj.category} onChange={handlechange} required />
+        <input type="text" placeholder="Author" className="book-input" name="author" value={bookObj.author} onChange={handlechange} required />
+        <Button onClick={addBook} />
+      </form>
       {newArray}
     </div>
   );

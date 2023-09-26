@@ -32,6 +32,7 @@ This is a single page app built with React(meta). This app allows users to enter
     <li>React Components</li>
     <li>React Router V6</li>
     <li>CSS</li>
+    <li>Redux Toolkit</li>
   </ul>
 </details>
 
@@ -40,6 +41,7 @@ This is a single page app built with React(meta). This app allows users to enter
 - **Build with React JS**
 - **Neat folder structure**
 - **Simple functions to add and remove books**
+- **Redux toolkit for state management**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,6 +87,7 @@ To run the project, execute the following command:
 - [ ] **Tests for the Bookstore app**
 - [ ] **Improved layout with UX in mind**
 - [ ] **A link to a working site**
+- [ ] **An api that adds and removes books**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

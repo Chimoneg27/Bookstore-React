@@ -15,7 +15,6 @@ const Home = () => {
       <h1>Welcome Home</h1>
       <div className="bookshelf">
         {book.map((book) => (
-          // eslint-disable-next-line camelcase
           <div className="book" key={book.item_id}>
             <h3>{ book.title }</h3>
             <p>{ book.author }</p>

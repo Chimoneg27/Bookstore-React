@@ -29,18 +29,21 @@ const BookActions = () => {
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        placeholder="Title"
       />
       <input
         type="text"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
+        placeholder="Author"
       />
       <input
         type="text"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
+        placeholder="Category"
       />
-      <Button onClick={addBookHandler} />
+      <Button onClick={addBookHandler} className="addBtn" label="Add Book" />
     </form>
   );
 };

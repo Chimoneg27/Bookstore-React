@@ -1,63 +1,47 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 import Button from './Button';
 
 const BookActions = () => {
-  const [bookArr, setBookArr] = useState([]);
-  const [bookObj, setBookObj] = useState({
-    title: '',
-    category: '',
-    author: '',
-  });
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
-  const addBook = () => {
-    if (!bookObj.title || !bookObj.category || !bookObj.author) {
+  const dispatch = useDispatch();
+
+  const addBookHandler = (e) => {
+    e.preventDefault();
+
+    if (!title || !author || !category) {
       return;
     }
 
-    setBookArr((prevState) => [...prevState, bookObj]);
-
-    setBookObj({
-      title: '',
-      category: '',
-      author: '',
-    });
+    dispatch(addBook({ title, author, category }));
+    setTitle('');
+    setAuthor(' ');
+    setCategory(' ');
   };
-
-  const handlechange = (event) => {
-    const { name, value } = event.target;
-    setBookObj((prevBookObj) => ({
-      ...prevBookObj,
-      [name]: value,
-    }));
-  };
-
-  const newArray = bookArr.map((item) => (
-    <div key={item} className="display-book">
-      <p>
-        {' '}
-        {item.title}
-      </p>
-      <p>
-        {' '}
-        {item.category}
-      </p>
-      <p>
-        {' '}
-        {item.author}
-      </p>
-    </div>
-  ));
 
   return (
-    <div className="book-container">
-      <form>
-        <input type="text" placeholder="Book Title" className="book-input" name="title" value={bookObj.title} onChange={handlechange} required />
-        <input type="text" placeholder="Category" className="book-input" name="category" value={bookObj.category} onChange={handlechange} required />
-        <input type="text" placeholder="Author" className="book-input" name="author" value={bookObj.author} onChange={handlechange} required />
-        <Button onClick={addBook} />
-      </form>
-      {newArray}
-    </div>
+    <form>
+      <input
+        type="text"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <input
+        type="text"
+        value={author}
+        onChange={(e) => setAuthor(e.target.value)}
+      />
+      <input
+        type="text"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      />
+      <Button onClick={addBookHandler} />
+    </form>
   );
 };
 

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 import Navbar from './Navbar';
 import BookActions from './BookAction';
+import Button from './Button';
 
 const Home = () => {
   const book = useSelector((state) => state.books.books);
@@ -19,7 +20,7 @@ const Home = () => {
             <h3>{ book.title }</h3>
             <p>{ book.author }</p>
             <p>{ book.category }</p>
-            <button type="button" onClick={() => dispatch(removeBook(book))}>Remove Book</button>
+            <Button onClick={() => dispatch(removeBook(book))} className="removeBtn" label="Remove Book" />
           </div>
         ))}
       </div>

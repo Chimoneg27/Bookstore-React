@@ -38,7 +38,9 @@ This is a single page app built with React(meta). This app allows users to enter
 
 ### Key Features <a name="key-features"></a>
 
-- **Build with React JS**
+- **Built with React JS**
+- **Single page app**
+- **Redux store with reducers**
 - **Neat folder structure**
 - **Simple functions to add and remove books**
 - **Redux toolkit for state management**
@@ -83,7 +85,6 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Using redux for state management**
 - [ ] **Tests for the Bookstore app**
 - [ ] **Improved layout with UX in mind**
 - [ ] **A link to a working site**

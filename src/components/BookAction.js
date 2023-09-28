@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { getBookApi, postBooks } from '../redux/books/booksSlice';
 import Button from './Button';
 
 const BookActions = () => {
@@ -10,17 +10,18 @@ const BookActions = () => {
 
   const dispatch = useDispatch();
 
-  const addBookHandler = (e) => {
+  const addBookHandler = async (e) => {
     e.preventDefault();
 
     if (!title || !author || !category) {
       return;
     }
 
-    dispatch(addBook({ title, author, category }));
+    await dispatch(postBooks([title, author, category]));
     setTitle('');
     setAuthor(' ');
     setCategory(' ');
+    await dispatch(getBookApi());
   };
 
   return (

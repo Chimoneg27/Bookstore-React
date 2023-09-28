@@ -30,24 +30,6 @@ const removeBookFromApi = createAsyncThunk('books/removeBookFromApi', async (boo
   return response.data;
 });
 
-/*
-extraReducers: (builder) => {
-    builder.addCase(removeBookFromApi.pending, (state) => ({
-      ...state,
-      isLoading: true,
-    }));
-    builder.addCase(removeBookFromApi.fulfilled, (state) => ({
-      ...state,
-      isLoading: true,
-    }));
-    builder.addCase(removeBookFromApi.rejected, (state) => ({
-      ...state,
-      isLoading: false,
-    }));
-  },
-});
-*/
-
 const booksSlice = createSlice({
   name: 'books',
   initialState,

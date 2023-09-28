@@ -33,6 +33,7 @@ This is a single page app built with React(meta). This app allows users to enter
     <li>React Router V6</li>
     <li>CSS</li>
     <li>Redux Toolkit</li>
+    <li>Bookstore API</li>
   </ul>
 </details>
 
@@ -42,7 +43,7 @@ This is a single page app built with React(meta). This app allows users to enter
 - **Single page app**
 - **Redux store with reducers**
 - **Neat folder structure**
-- **Simple functions to add and remove books**
+- **Bookstore API with delete, get and post method**
 - **Redux toolkit for state management**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

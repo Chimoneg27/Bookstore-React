@@ -4,6 +4,7 @@ import { getBookApi } from '../redux/books/booksSlice';
 import Navbar from './Navbar';
 import BookActions from './BookAction';
 import Book from './Book';
+import '../styles/Books.css';
 
 const Home = () => {
   const { books, isLoading } = useSelector((store) => store.books);
@@ -19,7 +20,9 @@ const Home = () => {
     <div className="home-page">
       <Navbar />
       {isLoading ? (
-        <div className="loading">Loading...</div>
+        <div className="loading">
+          <div className="loading-circle" />
+        </div>
       ) : (
         <div className="bookshelf">
           <ul>

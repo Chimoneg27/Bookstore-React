@@ -45,6 +45,7 @@ This is a single page app built with React(meta). This app allows users to enter
 - **Neat folder structure**
 - **Bookstore API with delete, get and post method**
 - **Redux toolkit for state management**
+- **Neat user interface**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,9 +88,7 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Tests for the Bookstore app**
-- [ ] **Improved layout with UX in mind**
 - [ ] **A link to a working site**
-- [ ] **An api that adds and removes books**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

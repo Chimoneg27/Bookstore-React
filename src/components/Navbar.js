@@ -12,7 +12,7 @@ const Navbar = () => (
     </ul>
 
     <div>
-      <BiSolidUser className="text-2xl" />
+      <BiSolidUser className="bi text-2xl" />
     </div>
   </nav>
 );

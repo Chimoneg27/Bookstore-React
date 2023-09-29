@@ -91,13 +91,13 @@
   font-family: 'Roboto Slab', serif;
   color: var(--black-two);
   font-weight: 300;
+  font-size: 0.813rem;
 }
 
 .right p {
   height: 1.125rem;
   margin: 0.063rem 3.625rem 0 3.688rem;
   opacity: 0.5;
-  font-size: 0.813rem;
 }
 
 .right h3 {
@@ -114,9 +114,6 @@
   border-radius: 3px;
   background-color: var(--azure);
   border: none;
-  font-family: 'Roboto Slab', serif;
-  font-size: 0.813rem;
-  font-weight: 300;
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;

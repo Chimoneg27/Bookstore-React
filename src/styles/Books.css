@@ -52,6 +52,8 @@
 
 .left {
   width: 45%;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
 }
 
 .middle {
@@ -60,12 +62,12 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  font-family: 'Montserrat', sans-serif;
   border-right: 2px solid rgba(216, 212, 212, 0.548);
 }
 
 .middle ul {
   list-style: none;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .features li {
@@ -86,25 +88,22 @@
   width: 25%;
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto Slab', serif;
+  color: var(--black-two);
+  font-weight: 300;
 }
 
 .right p {
   height: 1.125rem;
   margin: 0.063rem 3.625rem 0 3.688rem;
   opacity: 0.5;
-  font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
-  font-weight: 300;
-  color: var(--black-two);
 }
 
 .right h3 {
   height: 1.313rem;
   margin: 0.438rem 6.813rem 0.25rem 3.688rem;
-  font-family: 'Roboto Slab', serif;
   font-size: 1rem;
-  font-weight: 300;
-  color: var(--black-two);
 }
 
 .updateBtn {
@@ -142,7 +141,6 @@
 }
 
 .removeBtn {
-  font-family: 'Montserrat', sans-serif;
   color: var(--azure);
   background-color: inherit;
   border: none;
@@ -163,19 +161,15 @@
   color: var(--black-two);
   opacity: 0.5;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
 }
 
 .title {
   height: 1.813rem;
-  font-family: 'Roboto Slab', serif;
   font-size: 1.375rem;
-  font-weight: bold;
   color: var(--black-two);
 }
 
 .author {
-  font-family: 'Roboto Slab', serif;
   font-weight: 300;
   color: #4386bf;
 }

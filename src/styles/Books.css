@@ -40,7 +40,6 @@
 }
 
 .book {
-  font-family: 'Roboto', sans-serif;
   width: 90%;
   padding: 1.5rem 1rem;
   display: flex;
@@ -154,14 +153,16 @@
   text-decoration: underline  var(--azure);
 }
 
+.left p {
+  margin: 0 2.5rem 0 0;
+  font-size: 0.875rem;
+  height: 1.125rem;
+}
+
 .category {
   color: var(--black-two);
-  width: 3.063rem;
-  height: 1.125rem;
-  margin: 0 2.438rem 0 0;
   opacity: 0.5;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
   font-weight: bold;
 }
 
@@ -174,10 +175,7 @@
 }
 
 .author {
-  height: 1.188rem;
-  margin: 0.25rem 0 0;
   font-family: 'Roboto Slab', serif;
-  font-size: 0.875rem;
   font-weight: 300;
   color: #4386bf;
 }

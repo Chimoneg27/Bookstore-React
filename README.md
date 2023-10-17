@@ -52,7 +52,7 @@ This is a single page app built with React(meta). This app allows users to enter
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- **[Pokemon Gallery](https://bookstore-v8gf.onrender.com/)**
+- **[Bookstore](https://bookstore-v8gf.onrender.com/)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
